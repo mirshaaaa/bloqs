@@ -1,0 +1,182 @@
+body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #011627;
+  font-family: "Dosis", sans-serif;
+}
+#helpwrapper {
+  cursor: default;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 3rem;
+  color: #d8dbe2;
+}
+
+a {
+  text-decoration: none;
+  color: #a93f55;
+  font-size:1.2rem;
+}
+
+#logoWrapper {
+  display: block;
+  position: absolute;
+  top: 3%;
+  left: 12%;
+  text-decoration: none;
+}
+
+#logo {
+  width: 100px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  height: 50px;
+  line-height: 50px;
+  padding: 20px 20px;
+  background: #493657;
+  border-radius: 10px;
+  border: 0px solid white;
+  color: #d8dbe2;
+  margin-bottom: 22px;
+  font-size: 20px;
+  font-family: "Dosis", sans-serif;
+}
+
+input:focus {
+  outline: none;
+}
+#main {
+  width: 80%;
+  height: 90%;
+  margin: 0 auto;
+  margin-top: 130px;
+  position: relative;
+}
+
+#clear {
+  padding-top: 10px;
+  width: 16px;
+}
+
+#clear:hover {
+  cursor: pointer;
+}
+
+#help {
+  width: 40px;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+#helpBox {
+  position: absolute;
+  width: 300px;
+  height: 230px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #493657;
+  border-radius: 10px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+#helpwrapper {
+  padding: 12px;
+}
+
+.board {
+  position: relative;
+  margin: 0%;
+}
+
+.board-column {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 23%;
+  margin: 0 1%;
+  background: #d8dbe2;
+  border-radius: 10px;
+  z-index: 1;
+}
+.board-column.muuri-item-releasing {
+  z-index: 2;
+}
+.board-column.muuri-item-dragging {
+  z-index: 3;
+  cursor: move;
+}
+.board-column-header {
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  padding: 0 20px;
+  text-align: center;
+  color: #d8dbe2;
+  border-radius: 10px 10px 0 0;
+  font-size: 22px;
+  cursor: default;
+}
+.board-column#backlog {
+  background: #493657;
+}
+.board-column#buffer {
+  background: #ffa69e;
+}
+.board-column#progress {
+  background: #a93f55;
+}
+.board-column#done {
+  background: #79b791;
+}
+.board-column-content {
+  position: relative;
+  border: 10px solid transparent;
+  min-height: 95px;
+}
+.board-item {
+  position: absolute;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.board-item.muuri-item-releasing {
+  z-index: 9998;
+}
+.board-item.muuri-item-dragging {
+  z-index: 9999;
+  cursor: move;
+}
+.board-item.muuri-item-hidden {
+  z-index: 0;
+}
+.board-item-content {
+  position: relative;
+  padding: 20px;
+  background: #d8dbe2;
+  border-radius: 10px;
+  font-size: 17px;
+  color: #011627;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 2px 14px 2px rgba(1, 22, 39, 0.14);
+  -moz-box-shadow: 1px 2px 14px 2px rgba(1, 22, 39, 0.14);
+  box-shadow: 1px 2px 14px 2px rgba(1, 22, 39, 0.14);
+}
+@media (max-width: 600px) {
+  .board-item-content {
+    text-align: center;
+  }
+}
